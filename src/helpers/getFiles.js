@@ -1,9 +1,9 @@
-export const getGifs = async ( category ) => {
-    const limit = 20;
-    
-    const url = `https://api.giphy.com/v1/gifs/search?api_key=IM85RP42PLOqyZC4jQkbAkqwslJGLueI&q=${ category }&limit=${ limit }`;
+export const getGifs = async( category ) => {
+    const limit = 10;
+    // ojo con la api key, estoy usando la que no es jeje
+    const url = `https://api.giphy.com/v1/gifs/search?api_key=eMC8kZEL3UMVVc1tWxIgTzIDMqV0zZxb&q=${ category }&limit=${ limit }`;
     const resp = await fetch( url );
-    const { data = [] } = await resp.json();
+    const { data } = await resp.json();
 
     const gifs = data.map( img => ({
         id: img.id,
@@ -11,6 +11,5 @@ export const getGifs = async ( category ) => {
         url: img.images.downsized_medium.url
     }));
 
-    console.log(gifs)
     return gifs;
 };
