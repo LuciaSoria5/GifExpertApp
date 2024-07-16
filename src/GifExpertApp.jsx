@@ -1,37 +1,29 @@
 import  { useState } from 'react';
 import { AddCategory } from './components/AddCategory'
+import { GifGrid } from './components/GifGrid';
 
 export const GiExpertApp = () => {
 
-    const [ categories, setCategories ] = useState([ 'One Punch', 'Dragon ball']);
+    const [ categories, setCategories ] = useState([ 'One Punch' ]);
 
-    const onAddCategory = (onNewCategory) => {
+    const onAddCategory = (newCategory) => {
         // push no sirve porque muta el objeto --> hay que crear un nuevo objeto, no cambiarlo
-        setCategories( [onNewCategory, ...categories] );
+        if ( categories.includes(newCategory) ) return;
+        setCategories( [newCategory, ...categories] );
         // setCategories( cat => [...categories, 'Naruto'] ); --> otra forma
     };
 
     return (
         <>
-            {/* Titulo */}
             <h1>GifExpertApp</h1>
-
-            {/* Input */}
             <AddCategory 
              // propiedades:
                 //setCategories={ setCategories }
                 onNewCategory={ onAddCategory }
             />
-            
-            {/* Listado de gif */}
-            {/*<button onClick={ onAddCategory }>Agregar</button>*/}
-            <ol> {/* Order List */}
-                { categories.map( category => {
-                    {/* console.log(categories) */}
-                    return <li key={ category }>{ category }</li>
-                }) }
-            </ol>
-                {/* Gif Item */}
-        </>
-    )
+            {/* React usa la key para saber cuando un elemento se elimino, asi que no hay que usar un indice */}
+            { categories.map( category => 
+                <GifGrid key={ category } category={ category }
+                /> )}
+        </> )
 };

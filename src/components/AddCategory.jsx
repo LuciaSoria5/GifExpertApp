@@ -5,9 +5,7 @@ export const AddCategory = ( { onNewCategory } ) => { //onNewCategory es una fun
     const [inputValue, setInputValue] = useState('');
 
     const onInputChange = ({ target }) => {
-        console.log(inputValue)
         setInputValue(target.value); // lo que escribe el usuario
-        console.log(inputValue)
     };
 
     const onSubmit = (event) => {
