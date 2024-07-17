@@ -24,7 +24,6 @@ export const AddCategory = ( { onNewCategory } ) => { //onNewCategory es una fun
             placeholder="Buscar Gifs"
             value={ inputValue }
             onChange={ onInputChange /* para capturar los cambios en el text box*/} 
-            
             />
         </form>
     )
