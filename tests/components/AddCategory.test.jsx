@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { AddCategory } from "../../src/components/AddCategory"
 
-describe('Pruebas en AddCategory', () => { 
+describe('Pruebas en <AddCategory />', () => { 
 
     const inputValue = 'Naruto';
 

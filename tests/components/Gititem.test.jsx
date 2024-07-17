@@ -1,7 +1,7 @@
 import { GifItem } from "../../src/components/GifItem";
 import { getAllByAltText, getAllByText, render, screen } from "@testing-library/react";
 
-describe('Pruebas en el  componente GitItem', () => { 
+describe('Pruebas en el  componente <GitItem />', () => { 
     
     const title = "Naruto";
     const url = "https://naruto.com/naruto.jpg";
