@@ -3,7 +3,7 @@ import { AddCategory, GifGrid } from './components' // por defecto va a index
 
 export const GifExpertApp = () => {
 
-    const [ categories, setCategories ] = useState([ 'One Punch' ]);
+    const [ categories, setCategories ] = useState([ 'Spy x Family' ]);
 
     const onAddCategory = (newCategory) => {
         // push no sirve porque muta el objeto --> hay que crear un nuevo objeto, no cambiarlo

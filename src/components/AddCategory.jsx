@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 
 export const AddCategory = ( { onNewCategory } ) => { //onNewCategory es una funcion. La invocamos cuando el usuario presiona enter
-    const [inputValue, setInputValue] = useState('');
+    const [inputValue, setInputValue] = useState('Spy x Family');
 
     const onInputChange = ({ target }) => {
         setInputValue(target.value); // lo que escribe el usuario
