@@ -1,4 +1,7 @@
 # Gif Expert App
+
+![Estado inicial de la Gif Expert App](/public/estadoInicial.png)
+
 Esta es una aplicación desarrollada en React 18.3.1 que permite a los usuarios buscar y visualizar GIFs. 
 
 La aplicación fue desplegada utilizando GitHub-Pages, y se encuentra disponible en [este link](https://luciasoria5.github.io/GifExpertApp/).
