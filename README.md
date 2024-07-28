@@ -26,15 +26,8 @@ Para ejecutar esta aplicación en tu máquina local, necesitas tener instalado l
    ```bash
    npm install
     ```
-    o    
-    ```bash
-    yarn install
-    ```
+   
 3. Ejecuta la aplicación en modo desarrollo:
     ```bash
    npm run dev
-    ```
-    o
-    ```bash
-   yarn dev
     ```
